@@ -3,7 +3,7 @@ import { useId } from "react";
 
 function InputBox({
   label,
-  amount,
+  amount = "",
   onAmountChange,
   onCurrencyChange,
   currencyOptions = [],
@@ -57,13 +57,13 @@ function InputBox({
 
 InputBox.propTypes = {
   label: PropTypes.string.isRequired,
-  amount: PropTypes.string.isRequired,
-  onAmountChange: PropTypes.func.isRequired,
+  amount: PropTypes.number,
+  onAmountChange: PropTypes.func,
   onCurrencyChange: PropTypes.func.isRequired,
   currencyOptions: PropTypes.array.isRequired,
   selectCurrency: PropTypes.string.isRequired,
-  amountDisable: PropTypes.bool.isRequired,
-  currencyDisable: PropTypes.bool.isRequired,
-  className: PropTypes.string.isRequired,
+  amountDisable: PropTypes.bool,
+  currencyDisable: PropTypes.bool,
+  className: PropTypes.string,
 };
 export default InputBox;
