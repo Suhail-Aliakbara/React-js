@@ -56,7 +56,7 @@ function InputBox({
 }
 
 InputBox.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
   amount: PropTypes.number,
   onAmountChange: PropTypes.func,
   onCurrencyChange: PropTypes.func.isRequired,
